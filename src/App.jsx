@@ -8,6 +8,7 @@ import Work from "./pages/Work";
 import Packages from "./pages/Packages";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import CustomQuote from "./pages/CustomQuote";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/packages" element={<Packages />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/custom-quote" element={<CustomQuote />} />
       </Routes>
 
       <Footer />

@@ -17,6 +17,7 @@ function Navbar() {
         <NavLink to="/services">Services</NavLink>
         <NavLink to="/work">Work</NavLink>
         <NavLink to="/packages">Packages</NavLink>
+        <NavLink to="/custom-quote">Custom Quote</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact" className="nav-btn">
           Contact

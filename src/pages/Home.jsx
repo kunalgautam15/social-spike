@@ -23,6 +23,10 @@ function Home() {
               Start Your Project
             </Link>
 
+            <Link to="/custom-quote" className="btn-secondary">
+              Get Custom Quote
+            </Link>
+
             <a
               href="https://www.instagram.com/socialspike.co.in/"
               target="_blank"
@@ -103,8 +107,8 @@ function Home() {
             Social Spike helps you stay active and memorable online.
           </p>
 
-          <Link to="/contact" className="btn-primary">
-            Get Free Consultation
+          <Link to="/custom-quote" className="btn-primary">
+            Request Custom Plan
           </Link>
         </div>
 
@@ -128,12 +132,46 @@ function Home() {
         </div>
       </section>
 
+      <section className="section">
+        <span className="section-tag">FAQ</span>
+        <h2>Questions Clients Usually Ask</h2>
+
+        <div className="cards">
+          <div className="card">
+            <span>01</span>
+            <h3>Can I get a custom quotation?</h3>
+            <p>
+              Yes. You can submit your requirements from the Custom Quote page,
+              and we will share pricing according to your business needs.
+            </p>
+          </div>
+
+          <div className="card">
+            <span>02</span>
+            <h3>Can I start work by choosing a plan?</h3>
+            <p>
+              Yes. You can select a plan from the Packages page. For now, the
+              details come to us on WhatsApp. Payment option will be added later.
+            </p>
+          </div>
+
+          <div className="card">
+            <span>03</span>
+            <h3>Do you handle complete pages?</h3>
+            <p>
+              Yes. Social Spike handles social media management, reels, designs,
+              branding, captions, planning and campaign creatives.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="cta-section">
         <h2>Ready To Grow With Social Spike?</h2>
         <p>We Spike. You Grow.</p>
 
-        <Link to="/contact" className="btn-white">
-          Contact Now
+        <Link to="/custom-quote" className="btn-white">
+          Get Custom Quotation
         </Link>
       </section>
     </main>

@@ -19,6 +19,7 @@ function Footer() {
         <Link to="/services">Services</Link>
         <Link to="/work">Work</Link>
         <Link to="/packages">Packages</Link>
+        <Link to="/custom-quote">Custom Quote</Link>
         <Link to="/about">About</Link>
       </div>
 

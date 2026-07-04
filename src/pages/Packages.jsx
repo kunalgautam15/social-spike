@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+
 function Packages() {
+  const whatsappNumber = "919026623417";
+
   const packages = [
     {
       name: "Starter",
@@ -41,6 +45,12 @@ function Packages() {
     },
   ];
 
+  const handlePlanInquiry = (planName, price) => {
+    const text = `Hello Social Spike,%0A%0AI want to start with this plan.%0A%0APlan Name: ${planName}%0APrice: ${price}%0A%0APlease share the next steps and payment details.`;
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+  };
+
   return (
     <main className="page">
       <section className="packages-hero">
@@ -57,10 +67,14 @@ function Packages() {
       <section className="packages-new">
         {packages.map((item, index) => (
           <div
-            className={item.popular ? "package-new-card popular-new" : "package-new-card"}
+            className={
+              item.popular ? "package-new-card popular-new" : "package-new-card"
+            }
             key={index}
           >
-            {item.popular && <div className="popular-new-tag">Most Popular</div>}
+            {item.popular && (
+              <div className="popular-new-tag">Most Popular</div>
+            )}
 
             <div className="package-head">
               <h2>{item.name}</h2>
@@ -77,6 +91,13 @@ function Packages() {
                 <li key={i}>{feature}</li>
               ))}
             </ul>
+
+            <button
+              className="package-action-btn"
+              onClick={() => handlePlanInquiry(item.name, item.price)}
+            >
+              Start This Plan
+            </button>
           </div>
         ))}
       </section>
@@ -87,6 +108,10 @@ function Packages() {
           For reels-only, design-only, event promotions or full brand handling,
           custom plans can be created according to your requirement.
         </p>
+
+        <Link to="/custom-quote" className="btn-primary">
+          Get Custom Quotation
+        </Link>
       </section>
     </main>
   );
