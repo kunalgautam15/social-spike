@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
+import ScrollAnimations from "./components/ScrollAnimations";
 
 import Home from "./pages/Home";
 import Services from "./pages/Services";
@@ -14,6 +15,7 @@ import CustomQuote from "./pages/CustomQuote";
 function App() {
   return (
     <>
+      <ScrollAnimations />
       <Navbar />
 
       <Routes>
