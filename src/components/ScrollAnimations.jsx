@@ -3,7 +3,7 @@ import { useEffect } from "react";
 function ScrollAnimations() {
   useEffect(() => {
     const animatedElements = document.querySelectorAll(
-      ".section, .card, .growth-section, .work-grid div, .service-card-new, .work-card-new, .package-new-card, .package-note, .work-bottom-cta, .about-new-left, .about-new-right, .contact-left-card, .contact-form-card, .cta-section"
+      ".section, .card, .growth-section, .process-section, .process-step, .work-grid div, .service-card-new, .work-card-new, .package-new-card, .package-note, .work-bottom-cta, .about-new-left, .about-new-right, .contact-left-card, .contact-form-card, .cta-section"
     );
 
     animatedElements.forEach((element) => {

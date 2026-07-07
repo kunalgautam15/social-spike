@@ -96,6 +96,55 @@ function Home() {
         </div>
       </section>
 
+      <section className="process-section">
+        <div className="process-heading">
+          <span className="section-tag">Our Process</span>
+          <h2>How Social Spike Starts Your Brand Growth</h2>
+          <p>
+            We follow a simple and clear process so every client knows what is
+            happening and how the work will move forward.
+          </p>
+        </div>
+
+        <div className="process-timeline">
+          <div className="process-step">
+            <span>01</span>
+            <h3>Requirement Discussion</h3>
+            <p>
+              First, we understand your business, target audience, goals and
+              content requirement.
+            </p>
+          </div>
+
+          <div className="process-step">
+            <span>02</span>
+            <h3>Content Planning</h3>
+            <p>
+              Then we create a content direction with reels, graphics, captions
+              and posting ideas.
+            </p>
+          </div>
+
+          <div className="process-step">
+            <span>03</span>
+            <h3>Creative Execution</h3>
+            <p>
+              Our team designs posts, edits reels and prepares premium content
+              according to your brand.
+            </p>
+          </div>
+
+          <div className="process-step">
+            <span>04</span>
+            <h3>Growth & Updates</h3>
+            <p>
+              We keep your page active and share updates so your brand keeps
+              moving in the right direction.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="growth-section">
         <div>
           <span className="section-tag">Why Social Spike?</span>
