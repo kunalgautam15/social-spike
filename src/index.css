@@ -1652,3 +1652,23 @@ a {
 .package-action-btn:hover {
   transform: translateY(-4px);
 }
+.package-action-btn {
+  width: 100%;
+  margin-top: 26px;
+  padding: 16px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 15px 45px rgba(168, 85, 247, 0.22);
+  transition: 0.3s;
+  display: block;
+  text-align: center;
+}
+
+.package-action-btn:hover {
+  transform: translateY(-4px);
+}

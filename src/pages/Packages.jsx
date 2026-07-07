@@ -45,10 +45,17 @@ function Packages() {
     },
   ];
 
-  const handlePlanInquiry = (planName, price) => {
-    const text = `Hello Social Spike,%0A%0AI want to start with this plan.%0A%0APlan Name: ${planName}%0APrice: ${price}%0A%0APlease share the next steps and payment details.`;
+  const getWhatsappLink = (planName, price) => {
+    const message = `Hello Social Spike,
 
-    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+I want to start with this plan.
+
+Plan Name: ${planName}
+Price: ${price}
+
+Please share the next steps and payment details.`;
+
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   };
 
   return (
@@ -92,12 +99,14 @@ function Packages() {
               ))}
             </ul>
 
-            <button
+            <a
+              href={getWhatsappLink(item.name, item.price)}
+              target="_blank"
+              rel="noreferrer"
               className="package-action-btn"
-              onClick={() => handlePlanInquiry(item.name, item.price)}
             >
               Start This Plan
-            </button>
+            </a>
           </div>
         ))}
       </section>
