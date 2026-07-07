@@ -106,6 +106,50 @@ Please share the next steps and payment details.`;
         ))}
       </section>
 
+      <section className="package-process-section">
+        <span className="section-tag">How It Works</span>
+
+        <h2>After Choosing A Plan, We Start With A Clear Process</h2>
+
+        <div className="package-process-grid">
+          <div>
+            <span>01</span>
+            <h3>Choose Your Plan</h3>
+            <p>
+              Client selects the suitable package and sends the inquiry directly
+              to Social Spike.
+            </p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <h3>Requirement Discussion</h3>
+            <p>
+              We discuss brand goals, content type, target audience and page
+              requirement.
+            </p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <h3>Content Planning</h3>
+            <p>
+              Reels, posts, stories and creative direction are planned according
+              to the selected package.
+            </p>
+          </div>
+
+          <div>
+            <span>04</span>
+            <h3>Work Starts</h3>
+            <p>
+              After confirmation, Social Spike starts content creation, posting
+              and page growth work.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="package-note">
         <h2>Need a custom package?</h2>
         <p>
