@@ -8,23 +8,17 @@ function Packages() {
       name: "Basic Plan",
       price: "₹4,999",
       desc: "Best for small businesses starting their online presence with basic content.",
-      features: [
-        "2 Reels",
-        "1 Graphic Post",
-        "2 Stories",
-        "Basic Content Support",
-        "Post on Jhansi Times for more reach",
-      ],
+      features: ["2 Reels", "1 Graphic Post", "2 Stories"],
     },
     {
       name: "Growth Plan",
       price: "₹7,999",
-      desc: "Best for brands that want more regular content and better page activity.",
+      desc: "Best for brands that want regular content and better page activity.",
       features: [
         "4 Reels",
         "7 - 9 Stories",
         "5 Graphic Posts",
-        "Meta Ads Support",
+        "Meta Ads — Extra Charge Accordingly",
         "Insight Management",
         "Logo Suggestions",
       ],
@@ -32,13 +26,13 @@ function Packages() {
     },
     {
       name: "Premium + Business Pro Plan",
-      price: "Custom",
-      desc: "Best for complete brand handling with content, page management and website support.",
+      price: "₹11,999",
+      desc: "Best for complete brand handling with content, management and website support.",
       features: [
         "6 Reels",
         "15 Stories",
         "8 Graphic Posts",
-        "Meta Ads Support",
+        "Meta Ads — Extra Charge",
         "Page Management",
         "Basic Website",
         "Logo Designing",
@@ -91,7 +85,7 @@ Please share the next steps and payment details.`;
 
             <div className="package-price">
               <h3>{item.price}</h3>
-              <span>{item.price === "Custom" ? "pricing" : "/ month"}</span>
+              <span>/ month</span>
             </div>
 
             <ul>
