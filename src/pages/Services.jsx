@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Services() {
   const services = [
     {
@@ -40,21 +42,56 @@ function Services() {
 
   return (
     <main className="page">
-      <section className="services-hero">
-        <span className="section-tag">Our Services</span>
-        <h1>Creative Services That Spike Your Brand Growth</h1>
-        <p>
-          From reels to branding, Social Spike provides complete digital
-          solutions to make your brand look active, premium and memorable online.
-        </p>
+      <section className="services-premium-hero">
+        <div>
+          <span className="section-tag">Our Services</span>
+
+          <h1>Creative Digital Services For Serious Brand Growth</h1>
+
+          <p>
+            Social Spike gives your brand a complete digital push with reels,
+            designs, social media management, branding, ads and website
+            solutions.
+          </p>
+
+          <div className="services-hero-actions">
+            <Link to="/custom-quote" className="btn-primary">
+              Get Custom Quote
+            </Link>
+
+            <Link to="/packages" className="btn-secondary">
+              View Packages
+            </Link>
+          </div>
+        </div>
+
+        <div className="services-hero-box">
+          <div>
+            <span>01</span>
+            <h3>Plan</h3>
+            <p>Content direction according to your business.</p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <h3>Create</h3>
+            <p>Premium reels, designs and creative execution.</p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <h3>Grow</h3>
+            <p>Consistent posting, engagement and brand recall.</p>
+          </div>
+        </div>
       </section>
 
-      <section className="services-showcase">
+      <section className="services-premium-grid">
         {services.map((service) => (
-          <div className="service-card-new" key={service.number}>
-            <div className="service-number">{service.number}</div>
+          <div className="service-premium-card" key={service.number}>
+            <div className="service-premium-number">{service.number}</div>
 
-            <div>
+            <div className="service-premium-content">
               <h2>{service.title}</h2>
               <p>{service.text}</p>
 
@@ -66,6 +103,33 @@ function Services() {
             </div>
           </div>
         ))}
+      </section>
+
+      <section className="service-highlight-section">
+        <div>
+          <span className="section-tag">Complete Solution</span>
+
+          <h2>One Agency For Content, Design, Ads & Digital Presence</h2>
+
+          <p>
+            You do not need separate people for reels, posts, captions, ads and
+            website. Social Spike helps you manage everything under one creative
+            direction.
+          </p>
+
+          <Link to="/contact" className="btn-primary">
+            Discuss Your Project
+          </Link>
+        </div>
+
+        <div className="service-highlight-list">
+          <div>Reels Strategy</div>
+          <div>Poster Designing</div>
+          <div>Page Management</div>
+          <div>Meta Ads Creative</div>
+          <div>Brand Identity</div>
+          <div>Website Design</div>
+        </div>
       </section>
     </main>
   );
