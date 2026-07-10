@@ -3,37 +3,37 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
   <url>
-    <loc>https://social-spike.vercel.app/</loc>
+    <loc>https://www.socialspike.co.in/</loc>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://social-spike.vercel.app/services</loc>
+    <loc>https://www.socialspike.co.in/services</loc>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://social-spike.vercel.app/work</loc>
+    <loc>https://www.socialspike.co.in/work</loc>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://social-spike.vercel.app/packages</loc>
+    <loc>https://www.socialspike.co.in/packages</loc>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://social-spike.vercel.app/custom-quote</loc>
+    <loc>https://www.socialspike.co.in/custom-quote</loc>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://social-spike.vercel.app/about</loc>
+    <loc>https://www.socialspike.co.in/about</loc>
     <priority>0.75</priority>
   </url>
 
   <url>
-    <loc>https://social-spike.vercel.app/contact</loc>
+    <loc>https://www.socialspike.co.in/contact</loc>
     <priority>0.95</priority>
   </url>
 </urlset>
