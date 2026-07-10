@@ -12,6 +12,7 @@ import Packages from "./pages/Packages";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CustomQuote from "./pages/CustomQuote";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/custom-quote" element={<CustomQuote />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
