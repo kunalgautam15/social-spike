@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/social-spike-logo.png";
 
 function Contact() {
@@ -29,37 +30,71 @@ function Contact() {
 
   return (
     <main className="page">
-      <section className="contact-modern">
-        <div className="contact-left-card">
-          <img src={logo} alt="Social Spike Logo" className="contact-logo" />
+      <section className="contact-premium-hero">
+        <div>
+          <span className="section-tag">Contact Social Spike</span>
 
-          <span className="section-tag">Start Your Growth</span>
-
-          <h1>
-            Let’s Spike Your <br />
-            Brand Online
-          </h1>
+          <h1>Let’s Talk About Your Brand Growth</h1>
 
           <p>
-            Tell us about your business and the service you need. Social Spike
-            will help you build a premium digital presence with content, reels,
-            designs and brand strategy.
+            Share your business details and requirement. Our team will connect
+            with you and suggest the right content, design or social media plan.
           </p>
 
-          <div className="contact-social-card">
-            <h3>Connect With Us</h3>
-
-            <a href="tel:+919026623417">+91 90266 23417</a>
+          <div className="contact-info-grid">
+            <a href="tel:+919026623417">
+              <span>Call Us</span>
+              <strong>+91 90266 23417</strong>
+            </a>
 
             <a
               href="https://www.instagram.com/socialspike.co.in/"
               target="_blank"
               rel="noreferrer"
             >
-              @socialspike.co.in
+              <span>Instagram</span>
+              <strong>@socialspike.co.in</strong>
             </a>
 
-            <p>Online Creative Social Media Agency</p>
+            <div>
+              <span>Agency Type</span>
+              <strong>Online Creative Agency</strong>
+            </div>
+          </div>
+        </div>
+
+        <div className="contact-brand-panel">
+          <img src={logo} alt="Social Spike Logo" />
+          <h3>We Spike. You Grow.</h3>
+          <p>Reels • Branding • Ads • Design • Websites</p>
+        </div>
+      </section>
+
+      <section className="contact-modern contact-premium-layout">
+        <div className="contact-left-card">
+          <span className="section-tag">Quick Inquiry</span>
+
+          <h1>
+            Start Your <br />
+            Project Today
+          </h1>
+
+          <p>
+            Fill this form and your details will be sent directly to Social
+            Spike on WhatsApp. We will discuss your requirement and suggest the
+            best package.
+          </p>
+
+          <div className="contact-social-card">
+            <h3>Need Custom Pricing?</h3>
+            <p>
+              For reels-only, design-only, event promotion or full page
+              management, you can request a custom quotation.
+            </p>
+
+            <Link to="/custom-quote" className="mini-link-btn">
+              Get Custom Quote
+            </Link>
           </div>
         </div>
 
