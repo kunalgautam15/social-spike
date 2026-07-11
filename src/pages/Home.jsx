@@ -4,7 +4,7 @@ import logo from "../assets/social-spike-logo.png";
 function Home() {
   return (
     <main>
-      <section className="home-hero">
+      <section className="home-hero compact-home-hero">
         <div className="home-hero-left">
           <span className="hero-badge">Creative Social Media Agency</span>
 
@@ -49,20 +49,10 @@ function Home() {
           <div className="hero-logo-card">
             <img src={logo} alt="Social Spike" />
           </div>
-
-          <div className="hero-floating-card top-card">
-            <h3>Content</h3>
-            <p>Strategy + Creativity</p>
-          </div>
-
-          <div className="hero-floating-card bottom-card">
-            <h3>Growth</h3>
-            <p>Reach + Engagement</p>
-          </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section compact-section">
         <span className="section-tag">What We Do</span>
         <h2>Services That Make Your Brand Stand Out</h2>
 
@@ -96,64 +86,62 @@ function Home() {
         </div>
       </section>
 
-      <section className="process-section">
+      <section className="process-section compact-process-section">
         <div className="process-heading">
           <span className="section-tag">Our Process</span>
           <h2>How Social Spike Starts Your Brand Growth</h2>
           <p>
-            We follow a simple and clear process so every client knows what is
-            happening and how the work will move forward.
+            We follow a simple and clear process so every client knows how the
+            work will move forward.
           </p>
         </div>
 
         <div className="process-timeline">
           <div className="process-step">
             <span>01</span>
-            <h3>Requirement Discussion</h3>
+            <h3>Requirement</h3>
             <p>
-              First, we understand your business, target audience, goals and
-              content requirement.
+              First, we understand your business, audience and content
+              requirement.
             </p>
           </div>
 
           <div className="process-step">
             <span>02</span>
-            <h3>Content Planning</h3>
+            <h3>Planning</h3>
             <p>
-              Then we create a content direction with reels, graphics, captions
-              and posting ideas.
+              Then we create a content direction with reels, graphics and
+              posting ideas.
             </p>
           </div>
 
           <div className="process-step">
             <span>03</span>
-            <h3>Creative Execution</h3>
+            <h3>Execution</h3>
             <p>
-              Our team designs posts, edits reels and prepares premium content
-              according to your brand.
+              Our team designs posts, edits reels and prepares premium content.
             </p>
           </div>
 
           <div className="process-step">
             <span>04</span>
-            <h3>Growth & Updates</h3>
+            <h3>Growth</h3>
             <p>
-              We keep your page active and share updates so your brand keeps
-              moving in the right direction.
+              We keep your page active and share updates for better brand
+              presence.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="growth-section">
+      <section className="growth-section compact-growth-section">
         <div>
           <span className="section-tag">Why Social Spike?</span>
           <h2>We Build A Digital Identity, Not Just Posts</h2>
 
           <p>
             We focus on content that looks premium, feels modern and connects
-            with the right audience. From local businesses to growing brands,
-            Social Spike helps you stay active and memorable online.
+            with the right audience.
           </p>
 
           <Link to="/custom-quote" className="btn-primary">
@@ -169,53 +157,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <span className="section-tag">Portfolio</span>
-        <h2>Work Categories We Handle</h2>
-
-        <div className="work-grid">
-          <div>Restaurant Promotions</div>
-          <div>School Campaigns</div>
-          <div>Clinic Branding</div>
-          <div>Event Marketing</div>
-        </div>
-      </section>
-
-      <section className="section">
-        <span className="section-tag">FAQ</span>
-        <h2>Questions Clients Usually Ask</h2>
-
-        <div className="cards">
-          <div className="card">
-            <span>01</span>
-            <h3>Can I get a custom quotation?</h3>
-            <p>
-              Yes. You can submit your requirements from the Custom Quote page,
-              and we will share pricing according to your business needs.
-            </p>
-          </div>
-
-          <div className="card">
-            <span>02</span>
-            <h3>Can I start work by choosing a plan?</h3>
-            <p>
-              Yes. You can select a plan from the Packages page. For now, the
-              details come to us on WhatsApp. Payment option will be added later.
-            </p>
-          </div>
-
-          <div className="card">
-            <span>03</span>
-            <h3>Do you handle complete pages?</h3>
-            <p>
-              Yes. Social Spike handles social media management, reels, designs,
-              branding, captions, planning and campaign creatives.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="cta-section">
+      <section className="cta-section compact-cta-section">
         <h2>Ready To Grow With Social Spike?</h2>
         <p>We Spike. You Grow.</p>
 
