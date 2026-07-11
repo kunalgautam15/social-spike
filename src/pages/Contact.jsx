@@ -11,6 +11,9 @@ function Contact() {
     message: "",
   });
 
+  const [whatsappLink, setWhatsappLink] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const whatsappNumber = "919026623417";
 
   const handleChange = (e) => {
@@ -23,9 +26,35 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const text = `Hello Social Spike,%0A%0AI want to discuss my project.%0A%0AName: ${form.name}%0ABusiness / Brand: ${form.business}%0AInstagram: ${form.instagram}%0AService Required: ${form.service}%0AMessage: ${form.message}`;
+    const message = `Hello Social Spike,
 
-    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+I want to discuss my project.
+
+Name: ${form.name}
+Business / Brand: ${form.business}
+Instagram: ${form.instagram}
+Service Required: ${form.service}
+Message: ${form.message}`;
+
+    const link = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    setWhatsappLink(link);
+    setShowSuccess(true);
+  };
+
+  const resetForm = () => {
+    setForm({
+      name: "",
+      business: "",
+      instagram: "",
+      service: "",
+      message: "",
+    });
+
+    setWhatsappLink("");
+    setShowSuccess(false);
   };
 
   return (
@@ -80,9 +109,9 @@ function Contact() {
           </h1>
 
           <p>
-            Fill this form and your details will be sent directly to Social
-            Spike on WhatsApp. We will discuss your requirement and suggest the
-            best package.
+            Fill this form and your details will be prepared for Social Spike on
+            WhatsApp. We will discuss your requirement and suggest the best
+            package.
           </p>
 
           <div className="contact-social-card">
@@ -99,71 +128,99 @@ function Contact() {
         </div>
 
         <div className="contact-form-card">
-          <div className="form-top">
-            <span>Project Inquiry</span>
-            <h2>Tell Us Your Requirement</h2>
-          </div>
+          {!showSuccess ? (
+            <>
+              <div className="form-top">
+                <span>Project Inquiry</span>
+                <h2>Tell Us Your Requirement</h2>
+              </div>
 
-          <form onSubmit={handleSubmit}>
-            <div className="input-row">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={form.name}
-                onChange={handleChange}
-                required
-              />
+              <form onSubmit={handleSubmit}>
+                <div className="input-row">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                  />
 
-              <input
-                type="text"
-                name="business"
-                placeholder="Business / Brand Name"
-                value={form.business}
-                onChange={handleChange}
-                required
-              />
+                  <input
+                    type="text"
+                    name="business"
+                    placeholder="Business / Brand Name"
+                    value={form.business}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <input
+                  type="text"
+                  name="instagram"
+                  placeholder="Instagram Handle / Page Link"
+                  value={form.instagram}
+                  onChange={handleChange}
+                />
+
+                <select
+                  name="service"
+                  value={form.service}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select Service</option>
+                  <option value="Social Media Management">
+                    Social Media Management
+                  </option>
+                  <option value="Reels Editing">Reels Editing</option>
+                  <option value="Graphic Designing">Graphic Designing</option>
+                  <option value="Paid Ads">Paid Ads</option>
+                  <option value="Website Design">Website Design</option>
+                  <option value="Complete Branding">Complete Branding</option>
+                </select>
+
+                <textarea
+                  name="message"
+                  placeholder="Briefly tell us about your requirement..."
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+
+                <button type="submit">Prepare WhatsApp Inquiry</button>
+              </form>
+
+              <p className="form-note">
+                After submitting, you can review and continue on WhatsApp.
+              </p>
+            </>
+          ) : (
+            <div className="form-success-card">
+              <div className="success-icon">✓</div>
+
+              <h2>Your Inquiry Is Ready!</h2>
+
+              <p>
+                Your project details have been prepared. Click below to continue
+                on WhatsApp and send the inquiry to Social Spike.
+              </p>
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noreferrer"
+                className="success-whatsapp-btn"
+              >
+                Continue On WhatsApp
+              </a>
+
+              <button className="success-edit-btn" onClick={resetForm}>
+                Edit Details
+              </button>
             </div>
-
-            <input
-              type="text"
-              name="instagram"
-              placeholder="Instagram Handle / Page Link"
-              value={form.instagram}
-              onChange={handleChange}
-            />
-
-            <select
-              name="service"
-              value={form.service}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select Service</option>
-              <option value="Social Media Management">
-                Social Media Management
-              </option>
-              <option value="Reels Editing">Reels Editing</option>
-              <option value="Graphic Designing">Graphic Designing</option>
-              <option value="Paid Ads">Paid Ads</option>
-              <option value="Website Design">Website Design</option>
-              <option value="Complete Branding">Complete Branding</option>
-            </select>
-
-            <textarea
-              name="message"
-              placeholder="Briefly tell us about your requirement..."
-              value={form.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-
-            <button type="submit">Send Inquiry On WhatsApp</button>
-          </form>
-
-          <p className="form-note">
-            You can also call us directly at +91 90266 23417
-          </p>
+          )}
         </div>
       </section>
     </main>

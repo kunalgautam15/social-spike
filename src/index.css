@@ -4752,3 +4752,129 @@ main {
     flex-direction: column;
   }
 }
+/* ============================= */
+/* FORM SUCCESS CARD */
+/* ============================= */
+
+.form-success-card {
+  min-height: 520px;
+  padding: 40px 26px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top, rgba(215, 139, 255, 0.22), transparent 42%),
+    rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(215, 139, 255, 0.26);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  animation: successCardEntry 0.55s ease both;
+}
+
+.success-icon {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 950;
+  box-shadow:
+    0 18px 55px rgba(168, 85, 247, 0.38),
+    0 0 0 12px rgba(168, 85, 247, 0.1);
+  animation: successPulse 1.8s ease-in-out infinite;
+}
+
+.form-success-card h2 {
+  color: white;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -1.4px;
+}
+
+.form-success-card p {
+  max-width: 520px;
+  color: var(--gray);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.success-whatsapp-btn,
+.success-edit-btn {
+  width: min(360px, 100%);
+  padding: 17px 22px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 950;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.success-whatsapp-btn {
+  margin-top: 10px;
+  color: white;
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  box-shadow: 0 16px 45px rgba(168, 85, 247, 0.3);
+}
+
+.success-edit-btn {
+  border: 1px solid rgba(215, 139, 255, 0.35);
+  color: white;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.success-whatsapp-btn:hover,
+.success-edit-btn:hover {
+  transform: translateY(-4px);
+}
+
+@keyframes successCardEntry {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes successPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 18px 55px rgba(168, 85, 247, 0.38),
+      0 0 0 8px rgba(168, 85, 247, 0.1);
+  }
+
+  50% {
+    box-shadow:
+      0 18px 55px rgba(168, 85, 247, 0.42),
+      0 0 0 18px rgba(168, 85, 247, 0);
+  }
+}
+
+@media (max-width: 650px) {
+  .form-success-card {
+    min-height: 430px;
+    padding: 34px 18px;
+  }
+
+  .success-icon {
+    width: 72px;
+    height: 72px;
+    font-size: 36px;
+  }
+
+  .form-success-card p {
+    font-size: 15.5px;
+  }
+}

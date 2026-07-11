@@ -13,6 +13,9 @@ function CustomQuote() {
     message: "",
   });
 
+  const [whatsappLink, setWhatsappLink] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const whatsappNumber = "919026623417";
 
   const handleChange = (e) => {
@@ -25,7 +28,7 @@ function CustomQuote() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const text = `Hello Social Spike,
+    const message = `Hello Social Spike,
 
 I want a custom quotation.
 
@@ -37,10 +40,27 @@ Services Required: ${form.services}
 Budget Range: ${form.budget}
 Requirement: ${form.message}`;
 
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`,
-      "_blank"
-    );
+    const link = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    setWhatsappLink(link);
+    setShowSuccess(true);
+  };
+
+  const resetForm = () => {
+    setForm({
+      name: "",
+      business: "",
+      phone: "",
+      instagram: "",
+      services: "",
+      budget: "",
+      message: "",
+    });
+
+    setWhatsappLink("");
+    setShowSuccess(false);
   };
 
   return (
@@ -100,98 +120,125 @@ Requirement: ${form.message}`;
         </div>
 
         <div className="quote-form-card">
-          <div className="form-top">
-            <span>Custom Quote Form</span>
-            <h2>Share Your Requirement</h2>
-          </div>
+          {!showSuccess ? (
+            <>
+              <div className="form-top">
+                <span>Custom Quote Form</span>
+                <h2>Share Your Requirement</h2>
+              </div>
 
-          <form onSubmit={handleSubmit}>
-            <div className="input-row">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={form.name}
-                onChange={handleChange}
-                required
-              />
+              <form onSubmit={handleSubmit}>
+                <div className="input-row">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                  />
 
-              <input
-                type="text"
-                name="business"
-                placeholder="Business / Brand Name"
-                value={form.business}
-                onChange={handleChange}
-                required
-              />
+                  <input
+                    type="text"
+                    name="business"
+                    placeholder="Business / Brand Name"
+                    value={form.business}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="input-row">
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone Number"
+                    value={form.phone}
+                    onChange={handleChange}
+                    required
+                  />
+
+                  <input
+                    type="text"
+                    name="instagram"
+                    placeholder="Instagram Handle / Page Link"
+                    value={form.instagram}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <select
+                  name="services"
+                  value={form.services}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select Required Service</option>
+                  <option value="Social Media Management">
+                    Social Media Management
+                  </option>
+                  <option value="Reels Editing">Reels Editing</option>
+                  <option value="Graphic Designing">Graphic Designing</option>
+                  <option value="Paid Ads">Paid Ads</option>
+                  <option value="Website Design">Website Design</option>
+                  <option value="Complete Branding">Complete Branding</option>
+                  <option value="Multiple Services">Multiple Services</option>
+                </select>
+
+                <select
+                  name="budget"
+                  value={form.budget}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select Budget Range</option>
+                  <option value="Below ₹5,000">Below ₹5,000</option>
+                  <option value="₹5,000 - ₹10,000">₹5,000 - ₹10,000</option>
+                  <option value="₹10,000 - ₹20,000">₹10,000 - ₹20,000</option>
+                  <option value="Above ₹20,000">Above ₹20,000</option>
+                  <option value="Not Sure Yet">Not Sure Yet</option>
+                </select>
+
+                <textarea
+                  name="message"
+                  placeholder="Explain your requirement in detail..."
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+
+                <button type="submit">Prepare Custom Quote Request</button>
+              </form>
+
+              <p className="form-note">
+                After submitting, you can review and continue on WhatsApp.
+              </p>
+            </>
+          ) : (
+            <div className="form-success-card">
+              <div className="success-icon">✓</div>
+
+              <h2>Your Custom Quote Is Ready!</h2>
+
+              <p>
+                Your quotation request has been prepared. Click below to
+                continue on WhatsApp and send the details to Social Spike.
+              </p>
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noreferrer"
+                className="success-whatsapp-btn"
+              >
+                Continue On WhatsApp
+              </a>
+
+              <button className="success-edit-btn" onClick={resetForm}>
+                Edit Details
+              </button>
             </div>
-
-            <div className="input-row">
-              <input
-                type="text"
-                name="phone"
-                placeholder="Phone Number"
-                value={form.phone}
-                onChange={handleChange}
-                required
-              />
-
-              <input
-                type="text"
-                name="instagram"
-                placeholder="Instagram Handle / Page Link"
-                value={form.instagram}
-                onChange={handleChange}
-              />
-            </div>
-
-            <select
-              name="services"
-              value={form.services}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select Required Service</option>
-              <option value="Social Media Management">
-                Social Media Management
-              </option>
-              <option value="Reels Editing">Reels Editing</option>
-              <option value="Graphic Designing">Graphic Designing</option>
-              <option value="Paid Ads">Paid Ads</option>
-              <option value="Website Design">Website Design</option>
-              <option value="Complete Branding">Complete Branding</option>
-              <option value="Multiple Services">Multiple Services</option>
-            </select>
-
-            <select
-              name="budget"
-              value={form.budget}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select Budget Range</option>
-              <option value="Below ₹5,000">Below ₹5,000</option>
-              <option value="₹5,000 - ₹10,000">₹5,000 - ₹10,000</option>
-              <option value="₹10,000 - ₹20,000">₹10,000 - ₹20,000</option>
-              <option value="Above ₹20,000">Above ₹20,000</option>
-              <option value="Not Sure Yet">Not Sure Yet</option>
-            </select>
-
-            <textarea
-              name="message"
-              placeholder="Explain your requirement in detail..."
-              value={form.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-
-            <button type="submit">Send Custom Quote Request</button>
-          </form>
-
-          <p className="form-note">
-            Your custom quotation request will be sent directly to Social Spike
-            on WhatsApp.
-          </p>
+          )}
         </div>
       </section>
 
