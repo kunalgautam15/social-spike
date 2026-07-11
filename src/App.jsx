@@ -12,6 +12,8 @@ import Packages from "./pages/Packages";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CustomQuote from "./pages/CustomQuote";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/custom-quote" element={<CustomQuote />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

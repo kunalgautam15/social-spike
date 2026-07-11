@@ -47,6 +47,11 @@ function Footer() {
         <p>Online Creative Agency</p>
       </div>
 
+      <div className="footer-legal-links">
+        <Link to="/privacy-policy">Privacy Policy</Link>
+        <Link to="/terms-conditions">Terms & Conditions</Link>
+      </div>
+
       <div className="footer-bottom-new">
         <p>© 2026 Social Spike. All Rights Reserved.</p>
       </div>
