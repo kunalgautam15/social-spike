@@ -36,12 +36,24 @@ function Footer() {
 
         <a href="tel:+919026623417">+91 90266 23417</a>
 
+        <a href="mailto:growth@socialspike.co.in">
+          growth@socialspike.co.in
+        </a>
+
         <a
           href="https://www.instagram.com/socialspike.co.in/"
           target="_blank"
           rel="noreferrer"
         >
           Instagram
+        </a>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61591832428058"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Facebook
         </a>
 
         <p>Online Creative Agency</p>
