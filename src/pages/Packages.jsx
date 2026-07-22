@@ -107,7 +107,7 @@ Please share the next steps and payment details.`;
 
             <ul>
               {item.features.map((feature, i) => (
-                <li key={i}>✅ {feature}</li>
+                <li key={i}>{feature}</li>
               ))}
             </ul>
 
